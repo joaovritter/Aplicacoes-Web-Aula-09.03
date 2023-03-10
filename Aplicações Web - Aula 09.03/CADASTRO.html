@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Cadastro </title>
+
+    <style>
+        fieldset{
+            width: 15%;
+        }
+
+        section {
+                min-height: 100vh;
+                min-width: 100vw;
+                background-image: url(./logofundo.png);
+            }
+    </style>
+</head>
+<body>
+    <section> 
+
+    
+    <i><h1 align="center"> Cadastro De Cliente</h1></i>
+    <form action="./LOJA DO JOAO.html" method="POST">
+
+        <font face="Arial" color="black">
+            <ul>
+                <p>
+                    <li> <a href="PAGINA1.html">Início </a></li>
+                </p>
+                <p>
+                    <li> <a href="SOBRE.html">Conheça o Criador</a></li>
+                </p>
+                <p>
+                    <li> <a href="LOJA DO JOAO.html">Veículos em Estoque</a></li>
+                </p>
+                <p>
+                    <li> <a href="GALERIA.html">Galeria</a></li>
+                </p>
+                <p>
+                    <li> <a href="CONTATO.html">Contate-nos </a></li>
+                </p>
+            </ul>
+        </font>
+
+        <br></br>
+
+
+<!--Label define oq mostrar-->
+<!--required - define um campo obrigatorio-->
+
+        <p>
+        <label for="nome">Nome: </label> 
+        <!--Size - para definir o tamanho da caixa de texto-->
+        <!--autofocus - seleciona uma caixa para digitar assim que abre o site-->
+        <!--spellcheck -  verifica se a escrita esta correta-->
+        <!--Placeholder - para aparecer uma "dica" sobre o que digitar no campo -->
+        <input type="text" id="nome" name="nome" placeholder="Nome do Cliente" size="25" autofocus="true" required> <br>
+         
+        </p> 
+        
+        <p>
+        <label for="cpf"> CPF: </label>
+        <!--minlenght e maxlength - definir numero minimo e maximo de caracteres para CPF-->
+        <!--pattern - limita os caracteres possiveis de escrever-->
+        <input type="text" id="cpf" name="cpf" minlength="14" maxlength="14" placeholder="000.000.000-00" size="14"   spellcheck="true" > 
+        </p> 
+
+        <p>
+        <label for="nascimento"> Data de Nascimento: </label>
+        <!--max - definir idade maxima, neste caso para ser maior de 18 anos-->
+        <input type="date" id="nascimento" name="nascimento" max="2005-12-31" > <br> 
+        </p> 
+
+        <p>
+        <label for="estado">Estado: </label> <!--readonly, nao deixa digitar-->
+        <input type="text" id="estado" name="estado" list="estados" placeholder="Estado Residente" > <br> <!--List, para fazer uma lista na caixa de texto-->
+        <datalist id="estados">
+            <option value="Acre (AC)"> </option>
+            <option value="Alagoas (AL)"> </option>
+            <option value="Amapá (AP)"> </option>
+            <option value="Amazonas (AM)"> </option>
+            <option value="Bahia (BA)"> </option>
+            <option value="Ceará (CE)"> </option>
+            <option value="Distrito Federal (DF)"> </option>
+            <option value="Espírito Santo (ES)"> </option>
+            <option value="Goiás (GO)"> </option>
+            <option value="Maranhão (MA)"> </option>
+            <option value="Mato Grosso (MT)"> </option>
+            <option value="Mato Grosso do Sul (MS)"> </option>
+            <option value="Minas Gerais (MG)"> </option>
+            <option value="Pará (PA)"> </option>
+            <option value="Paraíba (PB)"> </option>
+            <option value="Paraná (PR)"> </option>
+            <option value="Pernambuco (PE)"> </option>
+            <option value="Piauí (PI)"> </option>
+            <option value="Rio de Janeiro (RJ)"> </option>
+            <option value="Rio Grande do Norte (RN)"> </option>
+            <option value="Rio Grande do Sul (RS)"> </option>
+            <option value="Rondônia (RO)"> </option>
+            <option value="Roraima (RR)"> </option>
+            <option value="Santa Catarina (SC)"> </option>
+            <option value="São Paulo (SP)"> </option>
+            <option value="Sergipe (SE)"> </option>
+            <option value="Tocantins (TO)"> </option>
+        </datalist>    
+        </p>
+
+        <p>
+        <label for="cep">CEP: </label>
+        <input type="name" id="cep" name="cep" placeholder="00000-000">
+        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php"> Consultar Meu CEP</a> <!--href = links-->
+        </p>
+
+
+        <p>
+        <label for="email"> E-mail: </label>
+        <!--Placeholder para aparecer uma "dica" sobre o que digitar no campo -->
+        <!--multiple, por mais de um item-->
+        <input type="email" id="email" name="email" placeholder="xxx@xxx.xxx" multiple > <br> 
+        </p> 
+
+        <p>
+        <label for="telefone"> Telefone: </label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(99) 9 9999-9999" > <br>      
+        </p>
+        
+
+        <fieldset required>
+            <legend>Sexo</legend>
+            <label>
+                <input type="radio" name="radio" value="sexo" checked="true"> Masculino
+            </label>
+
+            <label>
+                <!--Checked, deixa selecionado a opcao-->
+                <input type="radio" name="radio" value="sexo"> Feminino 
+            </label>
+
+        </fieldset>
+
+        
+        <p>
+        <label for="file"> Documento de Identificação: </label>
+        <input type="file" id="file" name="file">
+        </p>
+
+        <p>
+        <!--acesskey - clica automaticamente o botão precionando Ctrl + tecla setada -->
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar" accesskey="k"> 
+        </p>    
+
+
+    </form>
+</section>
+</body>
+
+
+</html>
+
+
